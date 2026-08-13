@@ -1,0 +1,206 @@
+.board {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 30px 100px;
+    box-sizing: border-box;
+    color: #3f3a34;
+}
+
+/* Title */
+.board h1 {
+    margin: 0 0 45px;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: #38342f;
+}
+
+/* Small decorative line under title */
+.board h1::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 1px;
+    margin: 20px auto 0;
+    background: #8b8378;
+}
+
+/*   Message Form*/
+.board form {
+    margin-bottom: 60px;
+}
+
+/* Textarea */
+.board textarea {
+    display: block;
+    width: 100%;
+    min-height: 150px;
+    padding: 20px;
+    box-sizing: border-box;
+    resize: vertical;
+    border: 1px solid #d8d1c7;
+    border-radius: 2px;
+    background: #faf8f3;
+    color: #3f3a34;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.8;
+    outline: none;
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+/* Textarea focus */
+.board textarea:focus {
+    border-color: #9b9388;
+    background: #fffdf9;
+}
+
+/* Placeholder */
+.board textarea::placeholder {
+    color: #aaa39a;
+    font-style: italic;
+}
+
+/*   Submit Button */
+.board form button {
+    margin-top: 18px;
+    padding: 10px 22px;
+    border: 1px solid #5c564e;
+    border-radius: 2px;
+    background: #5c564e;
+    color: #fff;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.board form button:hover {
+    background: transparent;
+    color: #5c564e;
+}
+
+/*   Login Message */
+.board > div:not(.board-messages) {
+    margin-bottom: 60px;
+    padding: 25px;
+    text-align: center;
+    border-top: 1px solid #ded8cf;
+    border-bottom: 1px solid #ded8cf;
+    color: #777066;
+}
+
+.board > div:not(.board-messages) p {
+    margin: 0 0 18px;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* Login button */
+.board > div:not(.board-messages) button {
+    padding: 8px 24px;
+    border: 1px solid #777066;
+    border-radius: 2px;
+    background: transparent;
+    color: #5c564e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease;
+}
+
+.board > div:not(.board-messages) button:hover {
+    background: #5c564e;
+    color: white;
+}
+
+/*    Message List */
+.board-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+/*   Individual Message */
+.board-message {
+    padding: 25px 28px;
+    border: 1px solid #ded8cf;
+    background: rgba(250, 248, 243, 0.65);
+    transition:
+        border-color 0.25s ease,
+        background-color 0.25s ease;
+}
+
+.board-message:hover {
+    border-color: #bcb4a9;
+    background: #faf8f3;
+}
+
+/*   Message Info */
+.message-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e5dfd6;
+    color: #8a8278;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+}
+
+/*   Message Content */
+.board-message > p {
+    margin: 0;
+    color: #48423b;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.9;
+    white-space: pre-wrap;
+}
+
+/*   Loading / Empty State */
+.board-messages > p {
+    margin: 30px 0;
+    text-align: center;
+    color: #928a80;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    font-style: italic;
+}
+
+/*   Mobile */
+@media (max-width: 600px) {
+    .board {
+        padding: 45px 18px 70px;
+    }
+    .board h1 {
+        font-size: 32px;
+        letter-spacing: 2px;
+        margin-bottom: 35px;
+    }
+    .board-message {
+        padding: 20px;
+    }
+    .message-info {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+    .board-message > p {
+        font-size: 16px;
+    }
+}
+

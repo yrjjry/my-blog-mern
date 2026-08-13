@@ -1,0 +1,58 @@
+/*    POST CARD    */
+.post-card {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    background: transparent;
+}
+
+/*    POST EXCERPT    */
+.post-card-excerpt {
+    margin: 0 0 20px;
+    max-width: 100%;
+    min-width: 0;
+    font-size: 16px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/*    TIPTAP HTML CONTENT INSIDE POST CARD    */
+.post-card-excerpt img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 12px 0;
+    border-radius: var(--radius-md);
+}
+
+
+/* Prevent long code/content from breaking layout */
+.post-card-excerpt pre {
+    max-width: 100%;
+    overflow-x: auto;
+    padding: 15px;
+    border-radius: var(--radius-sm);
+    background: #e9e7df;
+}
+
+/*    MOBILE    */
+@media (max-width: 768px) {
+    .post-card-excerpt {
+        font-size: 15px;
+        line-height: 1.75;
+    }
+}
+
+.post-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post-title-link:hover {
+  text-decoration: underline;
+}

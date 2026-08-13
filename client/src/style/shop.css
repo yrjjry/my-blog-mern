@@ -1,0 +1,230 @@
+.shop-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.shop-add-product-button {
+    display: inline-block;
+    padding: 10px 18px;
+    border: 1px solid var(--border);
+    color: inherit;
+    text-decoration: none;
+    white-space: nowrap;
+    font-size: 14px;
+    transition: all 0.2s ease;
+}
+
+.shop-add-product-button:hover {
+    background: #222;
+    color: white;
+}
+
+@media (max-width: 700px) {
+    .shop-header-top {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+/* Shop*/
+.shop {
+    width: 100%;
+    max-width: 1126px;
+    margin: 0 auto;
+    padding: 72px 48px 100px;
+    box-sizing: border-box;
+}
+
+/*    Header*/
+.shop-header {
+    text-align: center;
+    margin-bottom: 64px;
+}
+
+.shop-eyebrow {
+    margin: 0 0 16px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #8a8175;
+}
+
+.shop-header h1 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 56px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    color: #302c27;
+}
+
+.shop-intro {
+    max-width: 520px;
+    margin: 20px auto 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #756d63;
+}
+
+/* Product Grid*/
+.product-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+    gap: 64px 32px;
+}
+
+/* Product Card*/
+.product-card {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+    transition:
+        transform 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+}
+
+/*    Product Image*/
+.product-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #e8e2d8;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition:
+        transform 0.6s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.035);
+}
+
+/* No Image*/
+.no-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 15px;
+    color: #958c80;
+}
+
+/* SOLD*/
+.sold-label {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    padding: 7px 11px;
+    background: rgba(48, 44, 39, 0.88);
+    color: #f5f0e8;
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    z-index: 2;
+}
+
+/* Product Info*/
+.product-info {
+    padding-top: 18px;
+}
+.product-info h2 {
+    margin: 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.35;
+    color: #302c27;
+}
+
+.product-condition {
+    margin: 7px 0 0;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #8d857a;
+}
+
+.product-price {
+    margin: 12px 0 0;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    color: #4f4941;
+}
+
+/* Empty State*/
+.shop > p {
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #82796d;
+}
+
+/* Responsive*/
+@media (max-width: 800px) {
+    .shop {
+        padding:
+            56px 28px 80px;
+    }
+    .shop-header {
+        margin-bottom: 48px;
+    }
+    .shop-header h1 {
+        font-size: 46px;
+    }
+    .product-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+        gap: 48px 24px;
+    }
+}
+
+@media (max-width: 520px) {
+    .shop {
+        padding:
+            44px 20px 64px;
+    }
+    .shop-header h1 {
+        font-size: 40px;
+    }
+    .shop-intro {
+        font-size: 15px;
+    }
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+    .product-image {
+        aspect-ratio: 4 / 5;
+    }
+}
+.product-edit-button {
+    margin-top: 12px;
+    padding: 7px 14px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.product-edit-button:hover {
+    background: #222;
+    color: white;
+}

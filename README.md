@@ -19,3 +19,7 @@ Deployment:
 Client: Hostinger
 
 Server: Render
+
+Future:
+
+Build payment with Stripe, but it doesn't support mainland China，may involve legal risks and compliance issues as well.

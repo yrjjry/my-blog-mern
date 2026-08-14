@@ -14,3 +14,8 @@ Pages:
        
        - Admin(Create/Edit/Delete posts, Publish/Edit/Delete products)
 
+Deployment:
+
+Client: Hostinger
+
+Server: Render
